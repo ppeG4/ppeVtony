@@ -1,0 +1,4 @@
+AuthName "Partie administration"
+AuthType Basic
+AuthUserFile "C:\wamp\www\ppe\administrateur\.htpasswd"
+Require valid-user
