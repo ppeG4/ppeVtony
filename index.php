@@ -1,7 +1,6 @@
 <?php
 session_start();	
 ?>
-branche windows
 <!DOCTYPE html>
 <html>
     <head>
