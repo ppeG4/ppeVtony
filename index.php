@@ -1,4 +1,5 @@
 <?php
+//https://github.com/ppeG4/ppeVtony
 session_start();	
 ?>
 <!DOCTYPE html>
@@ -35,17 +36,3 @@ session_start();
 
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
