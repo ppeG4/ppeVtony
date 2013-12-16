@@ -5,10 +5,12 @@ require_once("../include/head.inc.php");
 	<body>
 	<center><img src="../image/banniere.jpg" width=55% ></img></center>
         <?php
+        
 require_once("../include/menu.inc.php");
 ?>
+        <div id="contenu total" style="margin: auto; width: 80%">
 		
-        <div style="margin-left: 5%; " width="80%">	
+        <div style="margin-left: 5%; ">	
         <h1>Gestion Reservation </h1>
         
 		
@@ -155,10 +157,12 @@ require_once("../include/menu.inc.php");
 		}
 
 	?>
-	</table>
+            </table>
 	
-	<br/>
+            <br/>
 
-        </div>	
+            </div>
+            
+       </div>
 	</body>
 </html>

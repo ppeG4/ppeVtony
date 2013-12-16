@@ -4,6 +4,8 @@ root {
 
 body{
     background-color:lightblue;
+    width: 80%;
+    margin: auto;
 }
 
 .color{
@@ -27,15 +29,12 @@ ul.menu {
 
 /* Menu */
 .menu {
+        max-width: 80%;
 	height: 40px;
-	width: 60%;
-	
 	background: #4c4e5a;
-	
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	
 	background: linear-gradient(top, #535562 0%, #202023 100%);
 	background: -moz-linear-gradient(top, #535562 0%, #202023 100%);
 	background: -webkit-linear-gradient(top, #535562 0%, #202023 100%);		
@@ -45,7 +44,7 @@ ul.menu {
 .menu li {
 	list-style: none;
 	float: left;
-	display: block;
+	
 	height: 40px;
 	position: relative;
 }

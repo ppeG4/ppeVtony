@@ -19,26 +19,27 @@
             $reservation = new Reservation();
             $nbPages = $reservation->getNombreReservation() / 5; // 5 nb voulu
             $nbPages = ceil($nbPages); // arrondi a l'entier supérieur
-            $limitMin = 0;
-            $limitMax = 5;
-            
-           
-            
+            $limitmin = 0;
+                   
             if(!isset($_REQUEST['id']))
                 $_REQUEST['id'] = 1;
-           
-            for($i = 1; $i<=$nbPages; $i++)
-            {    
-                
-                if($_REQUEST['id'] > $nbPages) // permet de controler l'id si l'utilisateur entre dans l'url un id trop grand
+                for($i = 1; $i<=$nbPages; $i++)
+                {    
+                    if($_REQUEST['id'] > $nbPages) // permet de controler l'id si l'utilisateur entre dans l'url un id trop grand
                      $_REQUEST['id'] = $nbPages;
-                else if ($_REQUEST['id'] <= 0)
+            else if ($_REQUEST['id'] <= 0)
                      $_REQUEST['id'] = 1;
                 
              
                 if($_REQUEST['id'] == $i)
                 {
-                    $rep = $reservation->getLesReservations(0, $limitMax);
+                    if($i == 1)
+                         $rep = $reservation->getLesReservations(1,5);
+                    else
+                        $rep = $reservation->getLesReservations($limitmin,5);
+                 
+                        
+                   
                     while($donnee = $rep->fetch())
                     {
                         $idReservation = $donnee['id_reservation'];
@@ -53,7 +54,7 @@
                 }
                    
                
-               $limitMax +=5;
+               $limitmin +=5;
             }
             
             
