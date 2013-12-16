@@ -33,8 +33,11 @@
             
                 if($_REQUEST['nbpages'] == $i)
                 {
-                    
-                    $rep = $reservationCount->getLesReservations($min, 5); 
+                    if($i == 1)
+                    $rep = $reservationCount->getLesReservations(1, 5); 
+                else {
+                    $rep = $reservationCount->getLesReservations($min, 5);
+                }
                   
         
 		while($evenement = $rep->fetch())
@@ -62,7 +65,7 @@
            
            
            for ($i = 1; $i<=$nbPages;$i++) 
-                echo "<a href='v_supprimerReservation.php?nbpages=$i'>$i</a>";
+                echo "<a href='v_supprimerReservation.php?nbpages=$i'>$i </a>";
          
            
  
