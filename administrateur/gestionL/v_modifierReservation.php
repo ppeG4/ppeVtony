@@ -34,7 +34,7 @@
                 if($_REQUEST['id'] == $i)
                 {
                     if($i == 1)
-                         $rep = $reservation->getLesReservations(1,5);
+                         $rep = $reservation->getLesReservations(0,5);
                     else
                         $rep = $reservation->getLesReservations($limitmin,5);
                  
